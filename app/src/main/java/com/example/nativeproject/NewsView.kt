@@ -29,6 +29,9 @@ fun NewsMain() {
         }
         SingleNews("Putin strikes again", "Putin committing more war crimes in Ukraine")
         SingleNews("Cows are flying", "Mysterious flying cows have been spotted")
+        Divider(
+            thickness = 3.dp,
+            color = Color.Black)
     }
 }
 
@@ -42,10 +45,10 @@ fun AddNews( newsVM : NewsViewModel ) {
         modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        OutlinedTextField(value = title, onValueChange = {title = it}, label = { Text(text = "Title")} )
-        OutlinedTextField(value = summary, onValueChange = {summary = it}, label = { Text(text = "Summary")} )
-        OutlinedTextField(value = contents, onValueChange = {contents = it}, label = { Text(text = "Contents")} )
-        OutlinedButton(onClick = { newsVM.addnews(title, summary, contents) }, modifier = Modifier.padding(top=5.dp)) {
+        OutlinedTextField(value = title, onValueChange = {title = it}, label = { Text(text = "Title")}, modifier = Modifier.height(60.dp) )
+        OutlinedTextField(value = summary, onValueChange = {summary = it}, label = { Text(text = "Summary")}, modifier = Modifier.height(60.dp) )
+        OutlinedTextField(value = contents, onValueChange = {contents = it}, label = { Text(text = "Contents")}, modifier = Modifier.height(60.dp) )
+        OutlinedButton(onClick = { newsVM.addnews(title, summary, contents) }, modifier = Modifier.padding(top=5.dp, bottom = 5.dp)) {
             Text(text = "Submit")
         }
     }
@@ -57,7 +60,6 @@ fun SingleNews(title: String, summary: String) {
     Divider(
         thickness = 3.dp,
         color = Color.Black,
-        modifier = Modifier.padding(bottom = 5.dp, top = 5.dp)
     )
     Row(
         modifier = Modifier
@@ -72,13 +74,13 @@ fun SingleNews(title: String, summary: String) {
                 fontWeight = FontWeight.Bold,
                 fontSize = 24.sp,
                 modifier = Modifier
-                    .padding(1.dp)
+                    .padding( top = 5.dp)
             )
             Text(
                 text = summary,
                 color = Color.Gray,
                 modifier = Modifier
-                    .padding(1.dp)
+                    .padding(bottom = 5.dp, top = 5.dp)
             )
         }
         Icon(painter = painterResource(id = R.drawable.ic_baseline_image_24), contentDescription = "placeholder")

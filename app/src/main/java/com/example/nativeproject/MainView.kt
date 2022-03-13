@@ -22,7 +22,7 @@ import androidx.navigation.compose.rememberNavController
 
 const val HomeNav = "home"
 const val NewsNav = "news"
-const val RandomNav = "random"
+const val PhotoNav = "photo"
 
 @Composable
 fun MainView(navController: NavHostController) {
@@ -35,15 +35,10 @@ fun MainView(navController: NavHostController) {
     else {
         NavHost(navController = navController, startDestination = HomeNav) {
             composable( route = HomeNav) { HomeView(user) }
-            composable( route = RandomNav) { RandomView() }
+            composable( route = PhotoNav) { PhotoView() }
             composable( route = NewsNav) { NewsMain() }
         }
     }
-}
-
-@Composable
-fun RandomView() {
-    Text(text = "random")
 }
 
 

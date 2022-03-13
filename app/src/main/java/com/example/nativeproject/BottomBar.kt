@@ -32,11 +32,11 @@ fun BottomBar(navController: NavHostController) {
                 .clickable { navController.navigate(HomeNav) }
         )
         Icon(
-            painter = painterResource(id = R.drawable.ic_baseline_menu_book_24),
-            contentDescription = "home",
+            painter = painterResource(id = R.drawable.ic_baseline_photo_library_24),
+            contentDescription = "photo",
             modifier = Modifier
                 .size(50.dp)
-                .clickable { navController.navigate(RandomNav) }
+                .clickable { navController.navigate(PhotoNav) }
         )
         Icon(
             painter = painterResource(id = R.drawable.ic_baseline_menu_book_24),
