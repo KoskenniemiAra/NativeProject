@@ -19,7 +19,7 @@ fun BottomBar(navController: NavHostController) {
     Row(modifier = Modifier
         .fillMaxWidth()
         .height(70.dp)
-        .background(color = Color.Blue),
+        .background(color = Color(0xffeb7e1e)),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceAround
     )
@@ -54,7 +54,7 @@ fun BottomBarNoNav() {
     Row(modifier = Modifier
         .fillMaxWidth()
         .height(70.dp)
-        .background(color = Color.Blue),
+        .background(color = Color(0xffeb7e1e)),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceAround
     )

@@ -26,7 +26,7 @@ fun LoginView( LoginVM : LoginViewModel) {
     Column(
         Modifier
             .fillMaxSize()
-            .background(Color.Cyan)
+            .background(color = Color(0xfffacca2))
             .padding(bottom = 100.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally

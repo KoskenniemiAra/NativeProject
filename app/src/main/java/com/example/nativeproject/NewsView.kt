@@ -22,7 +22,10 @@ fun NewsMain() {
 
     val newsHandling = viewModel<NewsViewModel>(LocalContext.current as ViewModelStoreOwner)
 
-    Column {
+    Column(modifier = Modifier
+        .background(color = Color(0xfffacca2))
+        .fillMaxSize()
+    ) {
         AddNews( newsHandling )
         newsHandling.news.forEach{
             SingleNews(title = it.title, summary = it.summary)
@@ -64,7 +67,7 @@ fun SingleNews(title: String, summary: String) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color.LightGray),
+            .background(color = Color(0xfffacca2)),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {

@@ -1,12 +1,14 @@
 package com.example.nativeproject
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
@@ -37,7 +39,8 @@ fun PhotoView() {
     // val photoitems = List<PhotoItem>(5){PhotoItem()}
 
     Column(modifier = Modifier
-        .fillMaxSize(),
+        .fillMaxSize()
+        .background(color = Color(0xfffacca2)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         BigPhoto(photoId = PhotoHandling.OpenPhoto.value)
@@ -95,7 +98,11 @@ fun PhotoButtons(photoVM: PhotoViewModel ) {
 
 @Composable
 fun PhotoButton(photoname: String, photoid: Int, photoVM: PhotoViewModel) {
-    Button(onClick = { photoVM.OpenPhoto.value = photoid }, modifier = Modifier.width(100.dp).height(50.dp)) {
+    Button(onClick = { photoVM.OpenPhoto.value = photoid },
+        modifier = Modifier
+            .width(100.dp)
+            .height(50.dp)
+    ) {
         Text(text = photoname)
     }
 }

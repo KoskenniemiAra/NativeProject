@@ -1,5 +1,6 @@
 package com.example.nativeproject
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Icon
@@ -16,7 +17,9 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun HomeView(loginVM : LoginViewModel) {
     Column(
-        modifier = Modifier.fillMaxSize() .padding(bottom = 150.dp),
+        modifier = Modifier
+            .fillMaxSize()
+            .background(color = Color(0xfffacca2)),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -26,7 +29,7 @@ fun HomeView(loginVM : LoginViewModel) {
         Text(text = "Welcome ${loginVM.user.value}",
             fontSize = 30.sp,
             fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(top = 20.dp)
+            modifier = Modifier.padding(top = 20.dp, bottom = 200.dp)
         )
     }
 
