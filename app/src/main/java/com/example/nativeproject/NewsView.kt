@@ -30,8 +30,7 @@ fun NewsMain() {
         newsHandling.news.forEach{
             SingleNews(title = it.title, summary = it.summary)
         }
-        SingleNews("Putin strikes again", "Putin committing more war crimes in Ukraine")
-        SingleNews("Cows are flying", "Mysterious flying cows have been spotted")
+        SingleNews("Example news", "Example of how a news looks like")
         Divider(
             thickness = 3.dp,
             color = Color.Black)
